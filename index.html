@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Collector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud">
+        <div>
+          <h1>Star Collector</h1>
+          <p>Move with arrow keys or WASD. Grab stars, dodge comets.</p>
+        </div>
+        <div class="score-panel">
+          <div class="score">
+            Score: <span id="score">0</span>
+          </div>
+          <div class="lives">
+            Lives: <span id="lives">3</span>
+          </div>
+          <button id="restart">Restart</button>
+        </div>
+      </header>
+      <section class="canvas-frame">
+        <canvas id="game" width="720" height="420" aria-label="Star Collector game"></canvas>
+        <div class="overlay" id="message" hidden>
+          <h2 id="message-title">Game Over</h2>
+          <p id="message-body">Press Restart to play again.</p>
+        </div>
+      </section>
+      <footer class="tips">
+        <p>Bonus tip: every 5 stars collected, comets move faster!</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

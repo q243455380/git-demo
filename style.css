@@ -1,0 +1,108 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #0b1021;
+  color: #e6e9ff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1c2340, #0b1021 60%);
+}
+
+.game-shell {
+  width: min(90vw, 860px);
+  padding: 24px;
+  background: rgba(16, 22, 44, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.hud h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+}
+
+.hud p {
+  margin: 0;
+  color: #b8c1ff;
+}
+
+.score-panel {
+  display: grid;
+  gap: 8px;
+  text-align: right;
+}
+
+.score,
+.lives {
+  font-size: 18px;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #5163ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(81, 99, 255, 0.35);
+}
+
+.canvas-frame {
+  position: relative;
+  padding: 12px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(27, 35, 74, 0.95), rgba(10, 14, 32, 0.95));
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(8, 12, 26, 0.8);
+  border-radius: 16px;
+}
+
+.overlay h2 {
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.tips {
+  color: #9aa4dd;
+  font-size: 14px;
+  text-align: center;
+}

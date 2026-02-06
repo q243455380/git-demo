@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>乡下老鼠进城 3D 游戏</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div class="title">乡下老鼠进城</div>
+      <div class="stats">
+        <span>生命: <strong id="lives">3</strong></span>
+        <span>距离: <strong id="distance">0</strong> 米</span>
+      </div>
+      <div class="controls">
+        <span>移动: WASD / 方向键</span>
+        <span>冲刺: Shift</span>
+        <span>跳跃: Space</span>
+        <span>暂停: P</span>
+      </div>
+      <button id="restart">重新开始</button>
+    </div>
+    <div id="overlay" class="hidden">
+      <div class="panel">
+        <h1 id="message">游戏结束</h1>
+        <p>城市太危险了，老鼠需要你的帮助再试一次！</p>
+        <button id="play-again">再来一次</button>
+      </div>
+    </div>
+    <div id="loader">加载 3D 场景...</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
